@@ -449,3 +449,76 @@ body > a[href="indext.html"] {
         letter-spacing: 2px;
     }
 }
+
+
+/* ========================================
+   TECNOLOGIAS E INTERESSES - GRID
+======================================== */
+
+.tecnologias .grid-cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* ========================================
+   CARTOES - FLEXBOX
+======================================== */
+
+.tecnologias .cartao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    min-height: 170px;
+    padding: 22px;
+
+    background: linear-gradient(135deg, #111f35, #0a1425);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.tecnologias .cartao:hover {
+    transform: translateY(-5px);
+    border-color: var(--azul-claro);
+}
+
+/* Conteudo interno dos cartoes */
+
+.tecnologias .cartao-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tecnologias .cartao h3 {
+    margin: 0;
+    color: var(--azul-claro);
+    font-size: 18px;
+}
+
+.tecnologias .cartao p {
+    margin: 0;
+    color: var(--cinza);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ========================================
+   RESPONSIVIDADE DOS CARTOES
+======================================== */
+
+@media (max-width: 800px) {
+    .tecnologias .grid-cartoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .tecnologias .grid-cartoes {
+        grid-template-columns: 1fr;
+    }
+}
