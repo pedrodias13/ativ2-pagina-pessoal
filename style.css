@@ -522,3 +522,86 @@ body > a[href="indext.html"] {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ========================================
+   RESPONSIVIDADE - AJUSTES FINAIS
+======================================== */
+
+/* Unidades relativas e imagens */
+html {
+    font-size: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 900px) {
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    .tecnologias .grid-cartoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav {
+        gap: 0.6rem;
+        padding: 1rem;
+    }
+
+    nav a {
+        padding: 0.6rem 1rem;
+    }
+
+    main {
+        width: 95%;
+        margin: 1.5rem auto;
+    }
+
+    section {
+        padding: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 1.35rem;
+    }
+
+    .tecnologias .grid-cartoes {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .tecnologias .cartao {
+        min-height: auto;
+        padding: 1.2rem;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    button,
+    input[type="submit"],
+    input[type="reset"] {
+        max-width: 100%;
+    }
+}
