@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página pessoal de Pedro Augusto, conhecido como Dias.">
-    <title>Minha Página Pessoal</title>
+    <meta name="description" content="Página pessoal de Pedro Augusto, estudante de Informática para Internet.">
+    <title>Minha Página Pessoal | Dias</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="inicio">
+<body>
 
     <header>
         <h1>Olá, eu sou o Dias!</h1>
@@ -17,9 +17,9 @@
     </header>
 
     <nav class="menu">
-        <a href="#inicio">Início</a>
-        <a href="sobre">Sobre mim</a>
+        <a href="sobre.html">Sobre mim</a>
         <a href="#interesses">Interesses</a>
+        <a href="#tecnologias">Tecnologias</a>
         <a href="#contato">Contato</a>
     </nav>
 
@@ -30,17 +30,16 @@
 
             <p>
                 Olá! Meu nome é Pedro Augusto, mas sou conhecido como Dias.
-                Sou estudante do curso Técnico em Informática para Internet
-                e escolhi essa formação por sempre ter gostado de tecnologia
-                e de tudo que envolve esse universo.
+                Sou estudante do curso Técnico em Informática para Internet e
+                escolhi essa formação por sempre ter gostado de tecnologia e
+                de tudo que envolve esse universo.
 
                 Tenho interesse em aprender como os sites são desenvolvidos,
                 como a programação funciona e como transformar ideias em
                 projetos digitais. Estou começando essa jornada com muita
-                coisa para descobrir e aprender, e espero que o curso me
-                ajude a desenvolver novas habilidades, ampliar meus
-                conhecimentos e me preparar para futuras oportunidades
-                na área de tecnologia.
+                coisa para descobrir e aprender, e espero que o curso me ajude
+                a desenvolver novas habilidades, ampliar meus conhecimentos
+                e me preparar para futuras oportunidades na área de tecnologia.
             </p>
 
             <img src="img/foto.jpeg" alt="Foto de Pedro Augusto">
@@ -49,11 +48,64 @@
         <section id="interesses">
             <h2>Meus hobbies e interesses</h2>
 
-            <ul>
+            <ul class="lista-hobbies">
                 <li>Basquete</li>
                 <li>Torcer pelo Botafogo</li>
                 <li>Assistir séries e filmes de ação</li>
             </ul>
+        </section>
+
+        <section id="tecnologias" class="tecnologias">
+            <h2>Tecnologias e conhecimentos</h2>
+
+            <p>
+                Algumas das tecnologias que fazem parte da minha jornada
+                de aprendizado em desenvolvimento Web.
+            </p>
+
+            <div class="grid-cartoes">
+
+                <article class="cartao">
+                    <div class="cartao-conteudo">
+                        <h3>HTML5</h3>
+                        <p>
+                            Linguagem de marcação utilizada para estruturar
+                            o conteúdo das páginas Web.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <div class="cartao-conteudo">
+                        <h3>CSS3</h3>
+                        <p>
+                            Tecnologia utilizada para estilizar páginas,
+                            definir cores, layouts e responsividade.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <div class="cartao-conteudo">
+                        <h3>JavaScript</h3>
+                        <p>
+                            Linguagem de programação utilizada para adicionar
+                            interatividade às páginas Web.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <div class="cartao-conteudo">
+                        <h3>TypeScript</h3>
+                        <p>
+                            Linguagem baseada em JavaScript que adiciona
+                            recursos de tipagem ao desenvolvimento.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
         </section>
 
         <section id="contato">
@@ -64,28 +116,53 @@
                     <legend>Formulário de contato</legend>
 
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                        required
+                    >
 
                     <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
 
                     <label for="assunto">Assunto:</label>
-                    <input type="text" id="assunto" name="assunto" required>
+                    <input
+                        type="text"
+                        id="assunto"
+                        name="assunto"
+                        placeholder="Digite o assunto"
+                        required
+                    >
 
                     <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        rows="5"
+                        placeholder="Escreva sua mensagem"
+                        required
+                    ></textarea>
 
                     <div class="botoes-formulario">
                         <button type="submit">Enviar</button>
-                        <button type="reset">Limpar</button>
+                        <button type="reset" class="botao-limpar">Limpar</button>
                     </div>
+
                 </fieldset>
             </form>
-
-            <nav class="nav-inicio">
-                <a href="#inicio">Início</a>
-            </nav>
-
+            
+              <nav class="nav-inicio">
+        <a href="index.html">Início</a>
+    </nav>
+            
         </section>
 
     </main>
@@ -93,18 +170,28 @@
     <footer class="rodape">
         <div class="rodape-conteudo">
 
-            <p>
+            <p class="direitos">
                 © 2026 Pedro Augusto (Dias).
                 Todos os direitos reservados.
             </p>
 
-            <a href="https://www.instagram.com/pedro.augustoo13/"
-               target="_blank"
-               rel="noopener noreferrer">
-                Instagram ↗
+            <a
+                class="link-instagram"
+                href="https://www.instagram.com/pedro.augustoo13/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram
+                <span class="seta-instagram">↗</span>
             </a>
 
         </div>
+
+        <div class="rodape-linha"></div>
+
+        <p class="rodape-assinatura">
+            DESENVOLVIMENTO WEB <span>•</span> PÁGINA PESSOAL
+        </p>
     </footer>
 
 </body>
