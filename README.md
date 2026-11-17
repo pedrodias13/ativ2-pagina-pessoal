@@ -35,4 +35,4 @@ Projeto desenvolvido durante a disciplina de **Programação Web I**, do curso T
 
 Projeto desenvolvido como parte do processo de aprendizagem em desenvolvimento Web, reunindo as etapas de criação, estilização e aprimoramento de uma página pessoal.
 
-**## Link da página:** https://pedrodias13.github.io/ativ2-pagina-pessoal/
+## Link da página: https://pedrodias13.github.io/ativ2-pagina-pessoal/
