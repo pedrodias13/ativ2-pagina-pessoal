@@ -116,15 +116,30 @@ button:focus-visible,
     outline-offset: 4px;
 }
 .nav-inicio {
-   display: flex;
-   justify-content: center;
-   margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
 }
+
 .nav-inicio a {
-   display: inline-block;
-   padding: 12px 30px;
-   border-radius: 8px
-   text-decoration: none;
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #087cff, #0047ab);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid #168bff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 100, 255, 0.3);
+    transition: 0.3s ease;
+}
+
+.nav-inicio a:hover {
+    background: #ffffff;
+    color: #0066cc;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 100, 255, 0.4);
 }
 
 /* ========================================
