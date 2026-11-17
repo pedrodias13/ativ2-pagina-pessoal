@@ -1,134 +1,244 @@
 
-/* ========================================
-   CONFIGURAÇÕES GERAIS
-======================================== */
-
 :root {
-    --preto: #05070d;
-    --fundo: #0b1220;
-    --cartao: #101d32;
-    --azul: #0878f9;
-    --azul-claro: #39b9ff;
+    --azul: #087cff;
+    --azul-escuro: #0047ab;
+    --azul-claro: #168bff;
+    --preto: #080d18;
+    --fundo: #101a2d;
     --branco: #ffffff;
-    --cinza: #aebbd0;
-    --borda: #203958;
+    --cinza: #c5cedb;
 }
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--branco);
     background:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(8, 120, 249, 0.13),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 90% 50%,
-            rgba(57, 185, 255, 0.08),
-            transparent 25%
-        ),
-        linear-gradient(135deg, var(--preto), #0b1424);
-    line-height: 1.7;
+        radial-gradient(circle at top left, #173a66, transparent 35%),
+        linear-gradient(135deg, #080d18, #101a2d, #071426);
+    line-height: 1.6;
+    min-height: 100vh;
 }
 
-/* ========================================
-   CABEÇALHO
-======================================== */
+/* CABEÇALHO */
 
 header {
-    position: relative;
-    overflow: hidden;
     text-align: center;
-    padding: 4rem 1.25rem;
-    background:
-        radial-gradient(
-            circle at top,
-            rgba(8, 120, 249, 0.25),
-            transparent 65%
-        ),
-        #080d18;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #06152b, #123d70);
     border-bottom: 2px solid var(--azul);
 }
 
 header h1 {
-    margin: 0 0 0.9rem;
-    font-size: clamp(1.9rem, 5vw, 2.9rem);
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 12px;
     color: var(--branco);
-    letter-spacing: 1px;
 }
 
 header p {
-    max-width: 43.75rem;
-    margin: 0 auto;
     color: var(--cinza);
-    font-size: 1rem;
+    font-size: 1.05rem;
 }
 
-/* ========================================
-   MENU DE NAVEGAÇÃO
-======================================== */
+/* MENU */
 
 .menu {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.9rem;
-    padding: 1.25rem;
-    background: rgba(5, 7, 13, 0.75);
-    border-bottom: 1px solid var(--borda);
+    gap: 15px;
+    padding: 18px;
+    background: rgba(4, 10, 22, 0.9);
+    border-bottom: 1px solid rgba(22, 139, 255, 0.4);
 }
 
 .menu a {
-    display: inline-block;
-    padding: 0.6rem 1.25rem;
-    color: var(--azul-claro);
-    background: transparent;
-    border: 1px solid var(--azul);
-    border-radius: 0.5rem;
+    color: var(--branco);
     text-decoration: none;
-    font-weight: bold;
-    font-size: 0.875rem;
-    transition: 0.3s;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.3s ease;
 }
 
 .menu a:hover {
-    color: var(--branco);
     background: var(--azul);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
-.menu a:focus-visible,
-button:focus-visible,
-.link-instagram:focus-visible {
-    outline: 2px solid var(--azul-claro);
-    outline-offset: 4px;
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    width: min(1100px, 90%);
+    margin: 35px auto;
 }
+
+/* SEÇÕES */
+
+section {
+    background: rgba(15, 29, 50, 0.92);
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(22, 139, 255, 0.35);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+section h2 {
+    color: var(--azul-claro);
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(22, 139, 255, 0.4);
+    padding-bottom: 10px;
+}
+
+section p {
+    color: var(--cinza);
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* FOTO */
+
+section img {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid var(--azul);
+    margin: 20px auto 0;
+    box-shadow: 0 5px 18px rgba(0, 100, 255, 0.25);
+}
+
+/* LISTA DE INTERESSES */
+
+section ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    list-style: none;
+}
+
+section li {
+    background: linear-gradient(145deg, #142c4b, #0b1729);
+    padding: 18px;
+    text-align: center;
+    border: 1px solid rgba(22, 139, 255, 0.4);
+    border-radius: 10px;
+    color: var(--branco);
+    transition: 0.3s ease;
+}
+
+section li:hover {
+    transform: translateY(-4px);
+    border-color: var(--azul-claro);
+    box-shadow: 0 5px 15px rgba(0, 100, 255, 0.2);
+}
+
+/* FORMULÁRIO */
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    border: 1px solid rgba(22, 139, 255, 0.5);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+legend {
+    color: var(--azul-claro);
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    color: var(--cinza);
+    margin: 15px 0 6px;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #091426;
+    border: 1px solid #315477;
+    border-radius: 7px;
+    color: var(--branco);
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--azul-claro);
+    box-shadow: 0 0 8px rgba(22, 139, 255, 0.3);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* BOTÕES DO FORMULÁRIO */
+
+.botoes-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.botoes-formulario button {
+    padding: 11px 25px;
+    background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
+    color: var(--branco);
+    border: 1px solid var(--azul-claro);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.botoes-formulario button:hover {
+    background: var(--branco);
+    color: var(--azul-escuro);
+    transform: translateY(-2px);
+}
+
+/* BOTÃO INÍCIO NO FINAL DO FORMULÁRIO */
+
 .nav-inicio {
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .nav-inicio a {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 12px 35px;
     background: linear-gradient(135deg, #087cff, #0047ab);
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
     border: 2px solid #168bff;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 100, 255, 0.3);
@@ -142,379 +252,61 @@ button:focus-visible,
     box-shadow: 0 6px 16px rgba(0, 100, 255, 0.4);
 }
 
-/* ========================================
-   CONTEÚDO PRINCIPAL
-======================================== */
-
-main {
-    width: min(68.75rem, 90%);
-    margin: 2.5rem auto;
-}
-
-section {
-    position: relative;
-    overflow: hidden;
-    margin: 1.9rem 0;
-    padding: 1.9rem;
-    background: linear-gradient(
-        135deg,
-        rgba(16, 29, 50, 0.96),
-        rgba(8, 15, 28, 0.96)
-    );
-    border: 1px solid var(--borda);
-    border-left: 3px solid var(--azul);
-    border-radius: 0.9rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-}
-
-section h2 {
-    margin-top: 0;
-    margin-bottom: 1.25rem;
-    color: var(--azul-claro);
-    font-size: 1.55rem;
-}
-
-section p {
-    color: var(--cinza);
-}
-
-/* ========================================
-   FOTO
-======================================== */
-
-section img {
-    display: block;
-    width: 11.25rem;
-    height: 11.25rem;
-    max-width: 100%;
-    margin: 1.5rem auto;
-    padding: 0.25rem;
-    object-fit: cover;
-    border: 2px solid var(--azul-claro);
-    border-radius: 0.75rem;
-    box-shadow: 0 0 22px rgba(8, 120, 249, 0.2);
-}
-
-/* ========================================
-   CARDS DOS HOBBIES
-======================================== */
-
-.lista-hobbies {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.1rem;
-    padding: 0;
-    list-style: none;
-}
-
-.lista-hobbies li {
-    position: relative;
-    display: flex;
-    align-items: center;
-    min-height: 6.9rem;
-    overflow: hidden;
-    padding: 1.4rem;
-    color: var(--branco);
-    background: linear-gradient(135deg, #111f35, #0a1425);
-    border: 1px solid var(--borda);
-    border-radius: 0.75rem;
-    transition: transform 0.3s, border-color 0.3s;
-}
-
-.lista-hobbies li:hover {
-    transform: translateY(-4px);
-    border-color: var(--azul-claro);
-}
-
-/* Símbolos decorativos */
-
-.lista-hobbies li::after {
-    position: absolute;
-    right: 0.75rem;
-    bottom: -1.25rem;
-    color: var(--azul-claro);
-    font-size: 5.3rem;
-    line-height: 1;
-    opacity: 0.13;
-    pointer-events: none;
-}
-
-.lista-hobbies li:nth-child(1)::after {
-    content: "🏀";
-}
-
-.lista-hobbies li:nth-child(2)::after {
-    content: "★";
-}
-
-.lista-hobbies li:nth-child(3)::after {
-    content: "🎬";
-}
-
-/* ========================================
-   CARTÕES DE TECNOLOGIAS
-   GRID E FLEXBOX
-======================================== */
-
-.tecnologias .grid-cartoes {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.25rem;
-}
-
-.tecnologias .cartao {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 10.6rem;
-    padding: 1.4rem;
-    background: linear-gradient(135deg, #111f35, #0a1425);
-    border: 1px solid var(--borda);
-    border-radius: 0.75rem;
-    transition: transform 0.3s, border-color 0.3s;
-}
-
-.tecnologias .cartao:hover {
-    transform: translateY(-5px);
-    border-color: var(--azul-claro);
-}
-
-.tecnologias .cartao-conteudo {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-}
-
-.tecnologias .cartao h3 {
-    margin: 0;
-    color: var(--azul-claro);
-    font-size: 1.1rem;
-}
-
-.tecnologias .cartao p {
-    margin: 0;
-    color: var(--cinza);
-    font-size: 0.875rem;
-    line-height: 1.6;
-}
-
-/* ========================================
-   FORMULÁRIO DE CONTATO
-======================================== */
-
-fieldset {
-    min-width: 0;
-    margin: 0;
-    padding: 1.5rem;
-    border: 1px solid var(--borda);
-    border-radius: 0.75rem;
-}
-
-legend {
-    padding: 0 0.6rem;
-    color: var(--azul-claro);
-    font-weight: bold;
-}
-
-label {
-    display: block;
-    margin: 1rem 0 0.4rem;
-    color: var(--cinza);
-}
-
-input,
-textarea {
-    display: block;
-    width: 100%;
-    min-width: 0;
-    padding: 0.75rem 0.9rem;
-    color: var(--branco);
-    background: #080f1c;
-    border: 1px solid #294363;
-    border-radius: 0.5rem;
-    font: inherit;
-}
-
-input::placeholder,
-textarea::placeholder {
-    color: #71829c;
-}
-
-textarea {
-    min-height: 7.5rem;
-    resize: vertical;
-}
-
-input:focus,
-textarea:focus {
-    outline: 2px solid var(--azul);
-    border-color: var(--azul-claro);
-}
-
-/* ========================================
-   BOTÕES DO FORMULÁRIO
-======================================== */
-
-.botoes-formulario {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1rem;
-}
-
-button {
-    padding: 0.75rem 1.4rem;
-    color: var(--branco);
-    background: linear-gradient(135deg, var(--azul), #0645ad);
-    border: 1px solid var(--azul-claro);
-    border-radius: 0.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(8, 120, 249, 0.3);
-}
-
-.botao-limpar {
-    background: transparent;
-    border-color: var(--borda);
-}
-
-.botao-limpar:hover {
-    background: #172840;
-}
-
-/* ========================================
-   RODAPÉ
-======================================== */
+/* RODAPÉ */
 
 .rodape {
-    width: 100%;
-    margin-top: 4rem;
-    padding: 1.9rem 8% 1.25rem;
-    background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(8, 120, 249, 0.12),
-            transparent 65%
-        ),
-        #080d18;
+    background: #050a13;
     border-top: 2px solid var(--azul);
+    padding: 25px 20px;
 }
 
 .rodape-conteudo {
+    width: min(1100px, 100%);
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1.25rem;
     flex-wrap: wrap;
-    max-width: 68.75rem;
-    margin: 0 auto;
+    gap: 15px;
 }
 
-.direitos {
-    margin: 0;
+.rodape p {
     color: var(--cinza);
-    font-size: 0.82rem;
-    line-height: 1.8;
+    font-size: 0.9rem;
 }
 
-/* ========================================
-   LINK DO INSTAGRAM
-======================================== */
-
-.link-instagram {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    padding: 0.75rem 1.4rem;
-    color: var(--branco);
-    background: linear-gradient(135deg, var(--azul), #0645ad);
-    border: 1px solid var(--azul-claro);
-    border-radius: 0.6rem;
-    text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: bold;
-    letter-spacing: 0.03rem;
-    box-shadow: 0 0 18px rgba(8, 120, 249, 0.25);
-    transition: 0.3s;
-}
-
-.link-instagram:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 22px rgba(8, 120, 249, 0.4);
-}
-
-.seta-instagram {
-    font-size: 1.1rem;
-    line-height: 1;
-}
-
-/* ========================================
-   LINHA E ASSINATURA DO RODAPÉ
-======================================== */
-
-.rodape-linha {
-    max-width: 68.75rem;
-    height: 1px;
-    margin: 1.6rem auto 1rem;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        var(--azul),
-        var(--azul-claro),
-        transparent
-    );
-}
-
-.rodape-assinatura {
-    margin: 0;
-    color: #71829c;
-    text-align: center;
-    font-size: 0.65rem;
-    letter-spacing: 0.18rem;
-}
-
-.rodape-assinatura span {
+.rodape a {
     color: var(--azul-claro);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
 }
 
-/* ========================================
-   RESPONSIVIDADE PARA TABLETS
-======================================== */
+.rodape a:hover {
+    color: var(--branco);
+}
+
+/* RESPONSIVIDADE - TABLETS */
 
 @media (max-width: 900px) {
-
     main {
-        width: 94%;
+        width: 92%;
     }
 
-    section {
-        padding: 1.5rem;
+    section ul {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .tecnologias .grid-cartoes {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    header {
+        padding: 45px 20px;
     }
 }
 
-/* ========================================
-   RESPONSIVIDADE PARA CELULARES
-======================================== */
+/* RESPONSIVIDADE - CELULARES */
 
 @media (max-width: 600px) {
-
     header {
-        padding: 2.8rem 1.1rem;
-    }
-
-    header h1 {
-        font-size: 2rem;
+        padding: 35px 15px;
     }
 
     header p {
@@ -522,60 +314,35 @@ button:hover {
     }
 
     .menu {
-        gap: 0.6rem;
-        padding: 1rem 0.6rem;
+        gap: 8px;
+        padding: 12px;
     }
 
     .menu a {
-        padding: 0.55rem 0.8rem;
-        font-size: 0.8rem;
+        padding: 9px 12px;
+        font-size: 0.9rem;
     }
 
     main {
-        width: 95%;
-        margin: 1.5rem auto;
+        width: 94%;
+        margin: 20px auto;
     }
 
     section {
-        margin: 1.25rem 0;
-        padding: 1.2rem;
+        padding: 20px;
+        margin-bottom: 20px;
     }
 
     section h2 {
-        font-size: 1.35rem;
+        font-size: 1.4rem;
     }
 
-    section p {
-        font-size: 0.95rem;
-    }
-
-    section img {
-        width: 10rem;
-        height: 10rem;
-    }
-
-    .lista-hobbies {
+    section ul {
         grid-template-columns: 1fr;
-        gap: 0.9rem;
-    }
-
-    .lista-hobbies li {
-        min-height: 5.5rem;
-        padding: 1.1rem;
-    }
-
-    .tecnologias .grid-cartoes {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .tecnologias .cartao {
-        min-height: auto;
-        padding: 1.2rem;
     }
 
     fieldset {
-        padding: 1rem;
+        padding: 15px;
     }
 
     .botoes-formulario {
@@ -586,49 +353,30 @@ button:hover {
         width: 100%;
     }
 
-    .rodape {
-        padding: 1.75rem 6% 1.25rem;
-    }
-
     .rodape-conteudo {
         flex-direction: column;
         text-align: center;
     }
-
-    .direitos {
-        font-size: 0.78rem;
-    }
-
-    .rodape-assinatura {
-        font-size: 0.6rem;
-        letter-spacing: 0.12rem;
-    }
 }
 
-/* ========================================
-   TELAS MUITO PEQUENAS
-======================================== */
+/* TELAS MUITO PEQUENAS */
 
 @media (max-width: 360px) {
-
     header h1 {
         font-size: 1.7rem;
     }
 
-    .menu {
-        gap: 0.45rem;
-    }
-
     .menu a {
-        padding: 0.5rem 0.65rem;
-        font-size: 0.75rem;
+        font-size: 0.82rem;
+        padding: 8px;
     }
 
     section {
-        padding: 1rem;
+        padding: 15px;
     }
 
-    section h2 {
-        font-size: 1.2rem;
+    .nav-inicio a {
+        width: 100%;
+        text-align: center;
     }
 }
