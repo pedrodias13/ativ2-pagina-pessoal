@@ -124,7 +124,7 @@ button:focus-visible,
    display: inline-block;
    padding: 12px 30px;
    border-radius: 8px
-      texr-decoration: none;
+   text-decoration: none;
 }
 
 /* ========================================
