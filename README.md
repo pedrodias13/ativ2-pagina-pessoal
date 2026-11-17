@@ -1,8 +1,8 @@
-Página Pessoal — Programação Web I
+*Página Pessoal — Programação Web I*
 
 Projeto desenvolvido durante a disciplina de Programação Web I, do curso Técnico em Informática para Internet do Instituto Federal do Sudeste de Minas Gerais — Campus Barbacena.
 
-Estruturação e criação da página
+*Estruturação e criação da página*
 
 - Desenvolvimento da página pessoal utilizando HTML5.
 - Organização das seções: Início, Sobre mim, Interesses, Projetos e Contato.
@@ -10,7 +10,7 @@ Estruturação e criação da página
 - Criação de menus e links de navegação.
 - Estruturação e organização do conteúdo.
 
-Identidade visual e estilização
+*Identidade visual e estilização*
 
 - Aplicação de CSS3 para personalização da página.
 - Definição de cores, fontes, fundos, espaçamentos e bordas.
@@ -18,7 +18,7 @@ Identidade visual e estilização
 - Criação de cartões para apresentação de tecnologias, como HTML5, CSS3, JavaScript e TypeScript.
 - Aplicação de efeitos visuais e interações.
 
-Adaptação e design responsivo
+*Adaptação e design responsivo*
 
 - Adaptação da página para celulares, tablets e computadores.
 - Utilização de unidades relativas.
@@ -27,7 +27,7 @@ Adaptação e design responsivo
 - Ajustes de dimensões, espaçamentos e disposição dos cartões.
 - Melhorias na legibilidade e na navegação em diferentes dispositivos.
 
-Tecnologias e ferramentas utilizadas
+*Tecnologias e ferramentas utilizadas*
 
 - HTML5
 - CSS3
