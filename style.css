@@ -589,3 +589,110 @@ textarea {
         text-align: center;
     }
 }
+
+
+/* ========================================
+   PÁGINA SOBRE MIM
+======================================== */
+
+.pagina-sobre {
+    width: min(1000px, 90%);
+    margin: 35px auto;
+}
+
+.conteudo-sobre {
+    width: 100%;
+}
+
+.conteudo-sobre p {
+    color: var(--cinza);
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* BOTÃO VOLTAR PARA A PÁGINA INICIAL */
+
+.conteudo-sobre .nav-inicio {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.conteudo-sobre .nav-inicio a {
+    display: inline-block;
+    padding: 12px 30px;
+
+    background: linear-gradient(135deg, #087cff, #0047ab);
+
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+
+    border: 2px solid #168bff;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 100, 255, 0.3);
+
+    transition: 0.3s ease;
+}
+
+.conteudo-sobre .nav-inicio a:hover {
+    background: #ffffff;
+    color: #0066cc;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 6px 16px rgba(0, 100, 255, 0.4);
+}
+
+/* RESPONSIVIDADE - TABLETS */
+
+@media (max-width: 900px) {
+    .pagina-sobre {
+        width: 92%;
+    }
+}
+
+/* RESPONSIVIDADE - CELULARES */
+
+@media (max-width: 600px) {
+    .pagina-sobre {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .conteudo-sobre {
+        padding: 20px;
+    }
+
+    .conteudo-sobre h2 {
+        font-size: 1.4rem;
+    }
+
+    .conteudo-sobre p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+    .conteudo-sobre .nav-inicio a {
+        width: 100%;
+        padding: 12px 15px;
+    }
+}
+
+/* TELAS MUITO PEQUENAS */
+
+@media (max-width: 360px) {
+    .pagina-sobre {
+        width: 94%;
+    }
+
+    .conteudo-sobre {
+        padding: 15px;
+    }
+}
+
