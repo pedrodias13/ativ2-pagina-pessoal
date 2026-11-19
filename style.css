@@ -1,4 +1,3 @@
-
 /* ========================================
    CORES E CONFIGURAÇÕES GERAIS
 ======================================== */
@@ -168,83 +167,34 @@ section p {
 
 .lista-hobbies {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    grid-template-columns: repeat(3, 1fr);
+
     gap: 15px;
     list-style: none;
 }
 
 .lista-hobbies li {
-    position: relative;
-    min-height: 190px;
-    display: flex;
-    align-items: flex-end;
+    background: linear-gradient(145deg, #142c4b, #0b1729);
+
     padding: 18px;
-    overflow: hidden;
-    isolation: isolate;
 
-    background-color: #080d18;
-    background-position: center;
-    background-size: cover;
+    text-align: center;
 
-    border: 1px solid rgba(22, 139, 255, 0.55);
+    border: 1px solid rgba(22, 139, 255, 0.4);
     border-radius: 10px;
+
+    color: var(--branco);
 
     transition: 0.3s ease;
 }
 
-/* SOMBRA PARA DESTACAR OS NOMES */
-
-.lista-hobbies li::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-
-    background: linear-gradient(
-        to top,
-        rgba(3, 8, 16, 0.95),
-        rgba(3, 8, 16, 0.05) 80%
-    );
-}
-
-.lista-hobbies li span {
-    color: var(--branco);
-    font-weight: bold;
-    font-size: 1rem;
-    text-shadow: 0 2px 8px #000;
-}
-
 .lista-hobbies li:hover {
     transform: translateY(-4px);
+
     border-color: var(--azul-claro);
+
     box-shadow: 0 5px 15px rgba(0, 100, 255, 0.2);
-}
-
-
-/* BASQUETE - LINHAS DA QUADRA */
-
-.hobby-basquete {
-    background-image:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 220'%3E%3Cg fill='none' stroke='%233d78b8' stroke-width='4' opacity='.55'%3E%3Cpath d='M0 0 L400 220 M0 220 L400 0 M0 110 H400 M200 0 V220'/%3E%3Cpath d='M40 0 V220 M360 0 V220 M0 35 H400 M0 185 H400' opacity='.5'/%3E%3Ccircle cx='200' cy='110' r='55'/%3E%3Cpath d='M0 35 Q100 110 0 185 M400 35 Q300 110 400 185'/%3E%3C/g%3E%3C/svg%3E"),
-        linear-gradient(135deg, #10233a, #050b15);
-}
-
-
-/* BOTAFOGO - LISTRAS E ESTRELA */
-
-.hobby-botafogo {
-    background-image:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 220'%3E%3Cg opacity='.45'%3E%3Cpath d='M-100 220 L120 -20 H190 L-30 220 Z M30 220 L250 -20 H320 L100 220 Z M160 220 L380 -20 H450 L230 220 Z' fill='%23b9c3d0'/%3E%3C/g%3E%3Cpath d='M300 25 L322 78 L380 82 L336 120 L350 178 L300 148 L250 178 L264 120 L220 82 L278 78 Z' fill='%23dce5ef' opacity='.55'/%3E%3C/svg%3E"),
-        linear-gradient(135deg, #171b24, #05070b);
-}
-
-
-/* FILMES - CLAQUETE */
-
-.hobby-filmes {
-    background-image:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 220'%3E%3Cg transform='rotate(-12 200 110)' opacity='.5'%3E%3Crect x='105' y='65' width='250' height='125' rx='5' fill='%231c3550' stroke='%2387a9ca' stroke-width='4'/%3E%3Cpath d='M105 65 L355 65 L355 25 L105 25 Z' fill='%232f5276' stroke='%2387a9ca' stroke-width='4'/%3E%3Cpath d='M130 25 L155 65 M180 25 L205 65 M230 25 L255 65 M280 25 L305 65 M330 25 L355 65' stroke='%23d5e2ef' stroke-width='12'/%3E%3Cpath d='M130 100 H330 M130 125 H280' stroke='%2396b5d3' stroke-width='4' opacity='.6'/%3E%3C/g%3E%3C/svg%3E"),
-        linear-gradient(135deg, #10233a, #050b15);
 }
 
 
